@@ -132,7 +132,7 @@ nav .navlinks li a{
 }
 
 .hero-text h1{
-    color: #cb1f9c;
+    color: #e5e5e5;
     font-size: 3rem;
 }
 
@@ -140,6 +140,68 @@ nav .navlinks li a{
     color: #e5e5e5;
 }
 
+.btn-group{
+    margin:45px 0;
+}
+
+.btn-group .btn{
+    border-color: #d5d5d5;
+    color: #fff;
+    background-color: #7D46B3;
+    padding: 12px 25px;
+    margin: 5px 0;
+    margin-right: 7px;
+    border-radius: 30px;
+    border: 2px solid #e5e5e5;
+    box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%);
+}
+
+.btn.active{
+    border-color: #cb1f9c;
+}
+
+/*Responsive design and display navbar for small screen */
+
+@media(max-width:930px)
+{
+    nav .togglebtn{
+        display: initial;
+    }
+    /* for toggle button**/
+    .click {
+        top:45px;
+    }
+    .click span{
+        position: absolute;
+        margin-top: 12px;
+    }
+    .click span:first-child{
+        transform: rotate(-45deg);
+    }
+    .click span:nth-child(2){
+        opacity: 0;
+        margin: 0;
+    }
+    .click span:last-child{
+        transform: rotate(45deg);
+        top: 0;
+    }
+    nav .navlinks{
+        position: absolute;
+        top:110px;
+        right: 0;
+        bottom: 0;
+        width: 60%;
+        height: 100vh;
+        background-color: #222;
+        z-index: 3;
+        box-shadow: 5px 13px 30px rgba(0,0,0,0.1);
+        transition: 0.5s;
+        padding: 25px;
+    }
+
+    nav .navlinks 
+}
 
 @media (max-width: 1200px) {
     .logo-image img {
