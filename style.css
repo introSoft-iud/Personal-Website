@@ -160,6 +160,19 @@ nav .navlinks li a{
     border-color: #cb1f9c;
 }
 
+.hero-text .social a{
+    color: #e5e5e5;
+    font-size: 25px;
+    margin-right: 10px;
+    transition: 0.5s;
+
+}
+
+.hero-text .social a:hover{
+    color: #cb1f9c;
+    transform: rotate(360deg);
+
+}
 /*Responsive design and display navbar for small screen */
 
 @media(max-width:930px)
@@ -189,18 +202,42 @@ nav .navlinks li a{
     nav .navlinks{
         position: absolute;
         top:110px;
-        right: 0;
+        right: -100%;
         bottom: 0;
         width: 60%;
         height: 100vh;
-        background-color: #222;
+        background-color: #20123A;
         z-index: 3;
         box-shadow: 5px 13px 30px rgba(0,0,0,0.1);
         transition: 0.5s;
-        padding: 25px;
+        padding: 25px 0px;
     }
 
-    nav .navlinks 
+    nav .navlinks li{
+        display: block;
+    }
+
+    nav .navlinks li a{
+        display: block;
+        margin-bottom:15px;
+        text-align: center;
+    }
+
+    nav .navlinks.open{
+        right:0 ;
+    }
+}
+
+@media(max-width:768px)
+{
+    .container{
+        flex-direction: column;
+        padding-top: 2rem;
+    }
+    .hero-text{
+        padding:40px 0px;
+
+    }
 }
 
 @media (max-width: 1200px) {
