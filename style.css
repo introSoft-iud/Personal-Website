@@ -230,6 +230,24 @@ nav .navlinks li a{
     justify-content: center;
     margin-top: 3rem;
 }
+
+
+
+.navlinks a:hover {
+    background-color: #D7B0FF; /* Color de fondo al pasar el cursor */
+    color: #20123A; /* Color del texto al pasar el cursor */
+    border-color: #D7B0FF; /* Color del borde al pasar el cursor */
+    transform: scale(1.05); /* Efecto de aumento al pasar el cursor */
+}
+
+/* Ajustes para la visibilidad del botón en dispositivos móviles */
+@media (max-width: 768px) {
+    .nav-button {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+}
 /*Responsive design and display navbar for small screen */
 
 @media(max-width:930px)
