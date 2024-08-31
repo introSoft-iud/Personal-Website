@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Computadores de Tubos al Vacío</title>
+    <link rel="stylesheet" href="style.css">
+    <!---Font awesome cdn font icon css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="hero-header">
+        <div class="wrapper">
+            <header class="header">
+                <div class="logo">
+                    <div class="logo-image">
+                        <img src="images/logo.png" alt="my personal logo" class="logo">
+                    </div>  
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="blog.html">Blog de ingeniería</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="container blog-container">
+                <div class="blog-content">
+                    <h1>Computadores de Tubos al Vacío</h1>
+
+                    <!-- Primer párrafo -->
+                    <div class="blog-section">
+                        <img src="images/shannon.jpeg" alt="Claude Shannon" class="blog-image">
+                        <p>Claude Shannon estableció la conexión entre los circuitos eléctricos y la lógica en 1937, basándose en los trabajos de George Boole. Shannon demostró que las operaciones booleanas podían representarse mediante circuitos electrónicos, sentando las bases para el desarrollo de los computadores modernos.</p>
+                    </div>
+
+                    <!-- Segundo párrafo -->
+                    <div class="blog-section">
+                        <img src="images/triodo.jpeg" alt="Triodo y Tubos de Vacío" class="blog-image">
+                        <h2>El Triodo y los Tubos de Vacío</h2>
+                        <p>El triodo, patentado en 1904 por John Ambrose Fleming y perfeccionado en 1906 por Lee de Forest, fue un avance clave en la electrónica. Este dispositivo permite controlar el flujo de electrones en un circuito mediante un pequeño voltaje, lo que lo convierte en un interruptor electrónico y un amplificador de señales.</p>
+                    </div>
+
+                    <!-- Tercer párrafo -->
+                    <div class="blog-section">
+                        <img src="images/eniac.jpeg" alt="ENIAC" class="blog-image">
+                        <h3>El ENIAC</h3>
+                        <p>El primer computador electrónico programable, el ENIAC, se construyó utilizando tubos de vacío y comenzó a operar en 1945. Este computador fue un hito en la historia de la computación, demostrando la viabilidad de las operaciones lógicas en circuitos eléctricos.</p>
+                    </div>
+
+                    <!-- Cuarto párrafo -->
+                    <div class="blog-section">
+                        <img src="images/transistor.jpeg" alt="Transistor" class="blog-image">
+                        <h3>El Transistor</h3>
+                        <p>El transistor, que reemplazó a los tubos de vacío, es un dispositivo más eficiente y pequeño que realiza las mismas funciones. Su invención permitió la miniaturización de la tecnología y la creación de computadores más rápidos y potentes.</p>
+                    </div>
+                    
+                    <div class="btn-group">
+                        <a href="https://www.youtube.com/watch?v=FU_YFpfDqqA" class="btn active">Ver más sobre el Triodo</a>
+                        <a href="https://www.digitaltrends.com/computing/remembering-eniac-and-the-women-who-programmed-it/" class="btn active">Historia del ENIAC</a>
+                        <a href="https://www.youtube.com/watch?v=7ukDKVHnac4" class="btn active">Aprender sobre Transistores</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        /**creating button click show hide navbar **/
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav=document.querySelector(".navlinks");
+        var links=document.querySelector(".navlinks li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
+    </script>
+
+</body>
+</html>

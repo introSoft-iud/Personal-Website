@@ -26,10 +26,8 @@
                         <span></span>
                     </div>
                     <ul class="navlinks">
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Sobre mí</a></li>
-                        <li><a href="#">Blog de ingeniería</a></li>
-                        <li><a href="#">Contacto</a></li>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="blog.html">Blog de ingeniería</a></li>
                     </ul>
                 </nav>
             </header>
@@ -39,11 +37,11 @@
                 </div>
 
                 <div class="hero-text">
-                    <h5>Holla, Yo soy <span class=""> Desarrolladora Python & Analista de Datos</span></h5>
+                    <h5>Holla, Yo soy <span class="input"> </span></h5>
                     <h1>Yenni Delgado</h1>
                     <p>Soy una profesional apasionada por la tecnología con experiencia en desarrollo de software y análisis de datos. Actualmente, trabajo como Instructora de Programación, donde imparto clases de Python y desarrollo planes de estudio innovadores. Mi experiencia incluye roles como Desarrolladora Java Back-end y Desarrolladora Fullstack, lo que me ha permitido fortalecer mis habilidades en desarrollo web y ánalisis de datos.</p>
                     <div class="btn-group">
-                        <a href="#" class="btn active">Descargar Hoja de Vida</a>
+                        <a href="docs/cv .pdf" class="btn active">Descargar Hoja de Vida</a>
                         <a href="#" class="btn active">Contacto</a>
                     </div>
 
@@ -54,6 +52,8 @@
             </div>
         </div>
     </div>
+    <!--- typed js for typing text effect-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
     <script>
         /**creating button click show hide navbar **/
         var togglebtn=document.querySelector(".togglebtn");
@@ -66,7 +66,7 @@
         })
 
         var typed=new Typed(".input",{
-            strings:["Frontend Developer","UX Designer","Web Developer"],
+            strings:["Desarrolladora Python", "Analista de datos", "Python developer", "fullstack developer"],
             typedSpeed:70,
             backSpeed:55,
             loop:true
