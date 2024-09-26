@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Ingeniería</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="hero-header">
+        <div class="wrapper">
+            <header class="header">
+                <div class="logo">
+                    <div class="logo-image">
+                        <img src="images/logo.png" alt="Logo personal" class="logo">
+                    </div>  
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="blog.html">Blog de ingeniería</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="container blog-container">
+                <div class="blog-content">
+                    <h1>Blog de Ingeniería</h1>
+                    <p>A continuación, encontrarás diferentes secciones del blog de Ingeniería con las tematicas abordadas en la clase Introducción a la Ingeniería de software y datos.</p>
+
+                    <div class="blog-list">
+                        <div class="blog-section">
+                            <img src="images/eniac.jpeg" alt="Computadores de Tubos al Vacío" class="blog-image">
+                            <div>
+                                <h2><a href="blog.html">Computadores de Tubos al Vacío</a></h2>
+                                <p>Explora la historia de los primeros computadores electrónicos y cómo los tubos al vacío revolucionaron la tecnología.</p>
+                            </div>
+                        </div>
+
+                        <div class="blog-section">
+                            <img src="images/git.png" alt="" class="blog-image">
+                            <div>
+                                <h2><a href="blog2.html">Tutorial de configuración y uso de git y github</a></h2>
+                                <p>Aprende paso a paso qué es git, como configurarlo y la importancia de uso, además descubre porque github revolucionó el código compartido</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /** Crear botón para mostrar/ocultar la barra de navegación **/
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".navlinks");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        });
+    </script>
+
+</body>
+</html>
