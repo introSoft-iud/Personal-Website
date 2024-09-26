@@ -240,6 +240,77 @@ nav .navlinks li a{
     transform: scale(1.05); /* Efecto de aumento al pasar el cursor */
 }
 
+
+Copy code
+/* Contenedor del blog */
+.blog-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.blog-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #e5e5e5;
+}
+
+.blog-content h1 {
+    color: #cb1f9c;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.blog-content p {
+    color: #e5e5e5;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Estilos para las secciones de entradas de blog */
+.blog-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #7D46B3;
+    padding-bottom: 2rem;
+}
+
+.blog-section img.blog-image {
+    max-width: 300px;
+    height: auto;
+    margin-right: 2rem;
+    border-radius: 10px;
+    box-shadow: 5px 7px 25px #7D46B3;
+    transition: 0.3s ease-in-out;
+}
+
+.blog-section img.blog-image:hover {
+    transform: scale(1.05);
+}
+
+.blog-section h2 {
+    color: #cb1f9c;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.blog-section p {
+    color: #e5e5e5;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.blog-section a {
+    color: #cb1f9c;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.blog-section a:hover {
+    color: #D7B0FF;
+}
 /* Ajustes para la visibilidad del botón en dispositivos móviles */
 @media (max-width: 768px) {
     .nav-button {
@@ -345,6 +416,18 @@ nav .navlinks li a{
     }
 }
 
+@media (max-width: 768px) {
+    .blog-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .blog-section img.blog-image {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Estilos responsive para pantallas más pequeñas del blog */
 @media (max-width: 768px) {
     .blog-section {
         flex-direction: column;
