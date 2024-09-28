@@ -265,7 +265,7 @@ Copy code
     color: #e5e5e5;
     font-size: 1.2rem;
     margin-bottom: 2rem;
-    text-align: center;
+    
 }
 
 .tutorial h2 {
@@ -291,7 +291,7 @@ Copy code
 
 .tutorial code {
     font-family: 'Courier New', Courier, monospace;
-    color: #7D46B3;
+    color: #a497b1;
 }
 
 /* Imagenes del tutorial */
