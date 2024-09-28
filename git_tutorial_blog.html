@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración de Git y GitHub</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="logo">
+                <div class="logo-image">
+                    <img src="images/logo.png" alt="Logo personal" class="logo">
+                </div>
+            </div>
+            <nav>
+                <ul class="navlinks">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="blog.html">Blog de ingeniería</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="container blog-container">
+            <div class="blog-content">
+                <h1>Guía de Configuración de Git y GitHub</h1>
+                <p>En este tutorial, aprenderás cómo instalar y configurar Git, así como vincularlo con GitHub para gestionar tus repositorios de manera eficiente.</p>
+
+                <!-- Entrada de Blog: Pasos del Tutorial -->
+                <div class="tutorial">
+                    <h2>Paso 1: Instalación de Git</h2>
+                    <p>Primero, necesitamos instalar Git. Dependiendo del sistema operativo, los pasos varían. Visita el <a href="https://git-scm.com/" target="_blank">sitio oficial de Git</a> para descargar la versión adecuada.</p>
+                    <img src="images/descargar-git.png" alt="Página de descarga de Git" class="tutorial-image">
+
+                    <h2>Paso 2: Configuración inicial de Git</h2>
+                    <p>Una vez instalado, abre la terminal y configura tu nombre y correo electrónico con los siguientes comandos:</p>
+                    <pre><code>git config --global user.name "Tu Nombre"</code></pre>
+                    <pre><code>git config --global user.email "tuemail@dominio.com"</code></pre>
+                    <img src="images/config-git.png" alt="Configuración de usuario en Git" class="tutorial-image">
+
+                    <h2>Paso 3: Crear un repositorio en GitHub</h2>
+                    <p>Ahora crea un nuevo repositorio en GitHub. Ve a tu cuenta de GitHub y selecciona <strong>New Repository</strong>. Dale un nombre a tu repositorio y elige si deseas que sea público o privado.</p>
+                    <img src="images/nuevo-repo.png" alt="Creación de nuevo repositorio en GitHub" class="tutorial-image">
+
+                    <h2>Paso 4: Clonar el repositorio</h2>
+                    <p>Para trabajar localmente con el repositorio recién creado, usa el siguiente comando en tu terminal:</p>
+                    <pre><code>git clone https://github.com/tuusuario/turepositorio.git</code></pre>
+                    <img src="images/clonar-repo.png" alt="Clonación de repositorio desde GitHub" class="tutorial-image">
+
+                    <h2>Paso 5: Agregar y hacer commit de cambios</h2>
+                    <p>Realiza cambios en tu proyecto y usa los siguientes comandos para agregarlos y hacer un commit:</p>
+                    <pre><code>git add .</code></pre>
+                    <pre><code>git commit -m "Mensaje del commit"</code></pre>
+                    <img src="images/git-add-commit.png" alt="Agregar y hacer commit de cambios" class="tutorial-image">
+
+                    <h2>Paso 6: Hacer push de los cambios</h2>
+                    <p>Finalmente, empuja tus cambios al repositorio remoto en GitHub con:</p>
+                    <pre><code>git push origin main</code></pre>
+                    <img src="images/git-push.png" alt="Hacer push de cambios a GitHub" class="tutorial-image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /** Crear botón para mostrar/ocultar la barra de navegación **/
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".navlinks");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        });
+    </script>
+
+</body>
+</html>

@@ -268,6 +268,54 @@ Copy code
     text-align: center;
 }
 
+.tutorial h2 {
+    color: #cb1f9c;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.tutorial p {
+    font-size: 1.2rem;
+    color: #e5e5e5;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.tutorial pre {
+    background-color: #333;
+    color: #e5e5e5;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+}
+
+.tutorial code {
+    font-family: 'Courier New', Courier, monospace;
+    color: #7D46B3;
+}
+
+/* Imagenes del tutorial */
+.tutorial-image {
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem 0;
+    border-radius: 10px;
+    box-shadow: 5px 7px 25px #7D46B3;
+    transition: transform 0.3s ease-in-out;
+}
+
+.tutorial-image:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .tutorial-image {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
 /* Estilos para las secciones de entradas de blog */
 .blog-section {
     display: flex;
