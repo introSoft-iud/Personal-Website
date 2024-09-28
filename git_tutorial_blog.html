@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración de Git y GitHub</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="logo">
+                <div class="logo-image">
+                    <img src="images/logo.png" alt="Logo personal" class="logo">
+                </div>
+            </div>
+            <nav>
+                <ul class="navlinks">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="blog.html">Blog de ingeniería</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="container blog-container">
+            <div class="blog-content">
+                <h1>Guía de Configuración de Git y GitHub</h1>
+                <p>En este tutorial, aprenderás cómo instalar y configurar Git, así como vincularlo con GitHub para gestionar tus repositorios de manera eficiente.</p>
+
+                <p> Iniciemos describiendo qué es Git y su flujo de trabajo:</p>
+                <h2>¿Qué es Git?</h2>
+                <p>Git es un sistema de control de versiones que te permite gestionar y rastrear los cambios en tus proyectos de software. Con Git, puedes trabajar en diferentes versiones de tu código al mismo tiempo, colaborar con otros desarrolladores y volver a versiones anteriores si es necesario.</p>
+
+                <h2>El flujo de trabajo en Git</h2>
+                <p>El flujo de trabajo en Git sigue tres pasos principales para gestionar los cambios en tus archivos:</p>
+
+                <h3>1. Área de preparación (staging)</h3>
+                <p>Cuando realizas cambios en los archivos de tu proyecto, primero debes agregarlos al área de preparación o "staging". Esto indica que los archivos están listos para ser confirmados (commit). Para agregar un archivo al área de preparación</p>
+
+                <h3>2. Confirmar los cambios (commit)</h3>
+                <p>Una vez que los archivos están en el área de preparación, el siguiente paso es confirmarlos, lo que significa que se guardan de manera permanente en el historial del proyecto.</p>
+                <h3>3. Enviar los cambios (push)</h3>
+                <p>Después de confirmar los cambios localmente, puedes enviarlos al repositorio remoto (como GitHub) para que se guarden en línea y puedan ser compartidos con otros desarrolladores.</p>
+                
+                <img src="images/Areas_Git.jpg" alt="Página de descarga de Git" class="tutorial-image">
+
+                <p> Ahora si podemos iniciar el paso a paso desde la instlación y configuración de GIT hasta hasta su vinculación con el repositorio remoto, que en este caso el que vamos a utilizar es GITHUB.</p>
+                
+                <!-- Entrada de Blog: Pasos del Tutorial -->
+                <div class="tutorial">
+                    <h2>Paso 1: Instalación de Git</h2>
+                    <p>Primero, necesitamos instalar Git. Dependiendo del sistema operativo, los pasos varían. Visita el <a href="https://git-scm.com/" target="_blank">sitio oficial de Git</a> para descargar la versión adecuada.</p>
+                    <img src="images/gitStep1.png" alt="Página de descarga de Git" class="tutorial-image">
+                    <p>Como en mi caso el sistema operativo que estoy utilizando es Linux los pasos que se deben realizar desde la terminal son:</p>
+                    <h3>1. Verificar la instalación de git</h3>
+                    <pre><code>git --version</code></pre>
+                    <img src="images/gitStep1.1.png" alt="verificación en la terminal de la versión de git" class="tutorial-image">
+                    <p>Como aparece la versión de git, significa que ya está instalada,en el caso de que no apareciera la versión de git lo que se debe hacer para instalarlo es:</p>
+                    <h3>1.1 Actualizar la lista de paquetes</h3>
+                    <pre><code>sudo apt update</code></pre>
+                    <h3>1.2 Instalar git</h3>
+                    <pre><code>sudo apt install git</code></pre>
+                    <h3>1.3 Verificar la instlación</h3>
+                    <pre><code>git --version</code></pre>
+                    
+                    
+                    <h2>Paso 2: Configuración inicial de Git</h2>
+                    <p>Una vez instalado, abre la terminal y configura tu nombre, correo electrónico y verifica la configuración con los siguientes comandos:</p>
+                    <pre><code>git config --global user.name "Tu Nombre"</code></pre>
+                    <pre><code>git config --global user.email "tuemail@dominio.com"</code></pre>
+                    <pre><code>git config --list</code></pre>
+                    <img src="images/gitStep2.png" alt="Configuración de usuario en Git" class="tutorial-image">
+
+                    <h2>Paso 3: Inicializar un repositorio de git</h2>
+                    <p>Cuando ya hayas realizado las configuraciones iniciales puedes inicializar un repositorio de git siguiendo los siguientes pasos: </p>
+                    <h3>1.1 Si aún no tienes una carpeta para tu proyecto la puedes crear desde la terminal desde la ruta en donde quiere ubicarlo</h3>
+                    <pre><code>mkdir nombre-proyecto</code></pre>
+                    <pre><code>cd nombre-proyecto</code></pre>
+                    <img src="images/gitStep3.png" alt="Configuración de usuario en Git" class="tutorial-image">
+
+                    <h3>1.2 Inicializa el repositorio utilizando el siguiente comando</h3>
+                    <pre><code>git init</code></pre>
+                    <img src="images/gitStep4.png" alt="Configuración de usuario en Git" class="tutorial-image">
+                    
+                    <h3>1.3 Agrega los archivos al repositorio y confirma los cambios</h3>
+                    <p>Con este comando se agregan todos los archivos al area de staging (area de preparación):</p>
+                    <pre><code>git add .</code></pre>
+                    <p>Para guardar los cambios que agregaste al área de preparación, haz un commit. Un commit es como una "foto" de tu proyecto en un momento específico: </p>
+                    <pre><code>git commit -m "Mensaje descriptivo de los cambios"</code></pre>
+                    
+                    <img src="images/gitStep5.png" alt="Configuración de usuario en Git" class="tutorial-image">
+
+                    <h2>Paso 4: Configurar Llaves SSH</h2>
+                    <p>Para evitar tener que ingresar tu nombre de usuario y contraseña cada vez que trabajas con GitHub, puedes configurar una llave SSH. Para hacerlo, sigue estos pasos:</p>
+
+                    <h3>Generar una nueva llave SSH</h3>
+                    <p>En la terminal, ejecuta el siguiente comando para generar una nueva llave SSH:</p>
+                    <pre><code>ssh-keygen -t ed25519 -C "tuemail@dominio.com"</code></pre>
+                    <p>Luego, presiona <strong>Enter</strong> para aceptar la ubicación por defecto y <strong>Enter</strong> nuevamente para dejar en blanco la contraseña opcional.</p>
+                    <img src="images/step1.1.png" alt="Generación de llave SSH" class="tutorial-image">
+
+                    <h3>Agregar la llave SSH al agente SSH</h3>
+                    <p>Para agregar tu nueva llave SSH al agente, usa los siguientes comandos:</p>
+                    <pre><code>eval "$(ssh-agent -s)"</code></pre>
+                    <pre><code>ssh-add ~/.ssh/id_ed25519</code></pre>
+                    <img src="images/step2.png" alt="Agregar llave SSH al agente" class="tutorial-image">
+
+                    <h3>Agregar la llave SSH a GitHub</h3>
+                    <p>Copia el contenido de tu llave SSH con el siguiente comando:</p>
+                    <pre><code>cat ~/.ssh/id_ed25519.pub</code></pre>
+                    <p>Ve a GitHub, en tu perfil, selecciona <strong>Settings</strong> &gt; <strong>SSH and GPG keys</strong>, y haz clic en <strong>New SSH key</strong>. Pega el contenido de la llave copiada y guárdala.</p>
+                    <img src="images/agregarSSH.png" alt="Agregar llave SSH a GitHub" class="tutorial-image">
+
+                    <h3>Configurar git para usar SSH</h3>
+                    <p>En mi caso como ya habia realizado la clonación del repositorio usando HTTPS y no SSH, lo que se debe hacer es cambiar el URL del repositorio a SSH con el siguiente comando: </p>
+                    <pre><code>git remote set-url origin git@github.com:usuario/repo.git
+                    </code></pre>
+                    <img src="images/step4.1.png" alt="Agregar llave SSH a GitHub" class="tutorial-image">
+
+
+                    <h2>Paso 3: Crear un repositorio en GitHub</h2>
+                    <p>Si aún no creaste el repositorio en Github. Ve a tu cuenta de GitHub y selecciona <strong>New Repository</strong>. Dale un nombre a tu repositorio y elige si deseas que sea público o privado.</p>
+                    <img src="images/githubStep1.png" alt="Creación de nuevo repositorio en GitHub" class="tutorial-image">
+
+                    
+                    <h2>Paso 4: Hacer push de los cambios</h2>
+                    <p>Como ya hiciste un commit de los cambios que realizaste, sigue los siguientes pasos:</p>
+                    <p>1. Cambia el nombre a la rama master</p>
+                    
+                    <pre><code>git branch -M main</code></pre>
+                    <p>2. Añade el link del repositorio remoto configurado con llaves ssh</p>
+                    <pre><code>git remote add origin git@github.com:yennivanessa97/Personal-Website-example.git</code></pre>
+                    <p>3. Empuja los cambio con el comando push</p>
+                    <pre><code>git push origin main</code></pre>
+                    <img src="images/push.png" alt="Creación de nuevo repositorio en GitHub" class="tutorial-image">
+
+                    
+                    <h2>Paso 5: Crear ramas usando GitHub Flow</h2>
+                    <p>El flujo de trabajo en GitHub se llama <strong>GitHub Flow</strong>, y está basado en el uso de ramas. Siguiendo este flujo, puedes desarrollar nuevas características o arreglar errores sin afectar el código principal. Los pasos básicos son:</p>
+
+                    <h3>Crear una nueva rama</h3>
+                    <p>Para crear una nueva rama, usa el siguiente comando:</p>
+                    <pre><code>git checkout -b nombre-de-la-rama</code></pre>
+                    <img src="images/branchStep1.png" alt="Creación de nueva rama en Git" class="tutorial-image">
+
+                    <h3>Trabajar en la rama</h3>
+                    <p>Realiza tus cambios en la nueva rama y luego haz commit como normalmente lo harías.</p>
+                    <img src="images/branchesStep2.png" alt="Push de la nueva rama a GitHub" class="tutorial-image">
+                    
+                    <h3>Sincronizar tu Rama con el Repositorio Remoto</h3>
+                    <p>Antes de abrir un pull request, asegúrate de que tu rama local esté actualizada con la última versión de main. Primero, cambia a la rama main y actualízala:</p>
+                    <img src="images/branchesStep3.png" alt="Push de la nueva rama a GitHub" class="tutorial-image">
+                    <p>Luego, vuelve a tu rama de funcionalidad y haz rebase:</p>
+                    <img src="images/branchStep3.1.png" alt="Push de la nueva rama a GitHub" class="tutorial-image">
+
+                    <h3>Subir la rama a GitHub</h3>
+                    <p>Una vez que los cambios estén listos, sube la rama a GitHub con:</p>
+                    <pre><code>git push origin nombre-de-la-rama</code></pre>
+                    <img src="images/branchesStep4.png" alt="Push de la nueva rama a GitHub" class="tutorial-image">
+
+                    <h3>Crear un Pull Request</h3>
+                    <p>En GitHub, abre el repositorio y verás un mensaje que te sugiere crear un <strong>Pull Request</strong> para fusionar los cambios en la rama <code>main</code>. Haz clic en <strong>Compare &amp; pull request</strong> y sigue las instrucciones.</p>
+                    <img src="images/PullStep1.png" alt="Crear un Pull Request en GitHub" class="tutorial-image">
+                    <img src="images/PullStep2.png" alt="Crear un Pull Request en GitHub" class="tutorial-image">
+                    <img src="images/PullStep3.png" alt="Crear un Pull Request en GitHub" class="tutorial-image">
+                    <img src="images/PullStep3.1.png" alt="Crear un Pull Request en GitHub" class="tutorial-image">
+                    <img src="images/PullStep3.2.png" alt="Crear un Pull Request en GitHub" class="tutorial-image">
+
+
+                    <h3>Fusionar la rama</h3>
+                    <p>Una vez que el Pull Request haya sido aprobado, puedes fusionar la rama con la rama principal:</p>
+                    <pre><code>git merge nombre-de-la-rama</code></pre>
+                    <img src="images/PullStep4.png" alt="Fusión de rama en Git" class="tutorial-image">
+                </div>
+
+
+
+
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /** Crear botón para mostrar/ocultar la barra de navegación **/
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".navlinks");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        });
+    </script>
+
+</body>
+</html>
